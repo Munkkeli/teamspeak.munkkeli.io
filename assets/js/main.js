@@ -26,3 +26,7 @@ updateTime();
 emojione.imageType = 'svg';
 
 $('.logo').html(emojione.toImage($('.logo').html()));
+
+$('.content').each(function () {
+  $(this).html(emojione.toImage($(this).html()));
+});
