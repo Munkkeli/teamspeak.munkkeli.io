@@ -10,19 +10,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-60251580-1', 'auto');
 ga('send', 'pageview');
 
-var updateTime = function() {
-	$('.bus .time').each(function() {
-		var time = moment($(this).attr('date'));
-		var minutes = Math.round(moment.duration(time.diff(moment())).asMinutes());
-		if(minutes >= 0)
-			$(this).html(minutes + '<small>' + time.format('HH:mm') + '</small>');
-		else
-			$(this).parent().remove();
-	});
-};
-setInterval(updateTime, 30000);
-updateTime();
-
 emojione.imageType = 'svg';
 
 $('.logo').html(emojione.toImage($('.logo').html()));
